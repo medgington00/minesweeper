@@ -1,0 +1,51 @@
+:root {
+    --body-bg-C: #222222;
+    --game-container-border-C: gray;
+    --game-container-bg-C: darkgray;
+
+    --cell-size: 18px;
+    --cell-bg-C: var(--game-container-bg-C);
+    --cell-bg-hover-C: var(--game-container-border-C);
+    --cell-border-C: rgb(200, 200, 200);
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    height:100dvh;
+    width:100%;
+    margin:0;
+    overflow:hidden;
+
+    background-color:var(--body-bg-C);
+}
+
+#template-container {
+    display:none;
+}
+
+.cell {
+    height:var(--cell-size);
+    width:var(--cell-size);
+
+    background-color:var(--game-container-bg-C);
+
+    border: calc(var(--cell-size)/5) outset var(--cell-border-C);
+}
+
+.cell:active {
+    /* background-color:var(--cell-bg-hover-C); */
+
+    border: calc(var(--cell-size)/7) inset var(--cell-bg-C);
+}
+
+#game-container {
+    width:600px;
+    height:600px;
+
+    background-color: var(--game-container-bg-C);
+
+    border: 12px solid var(--game-container-border-C);
+}

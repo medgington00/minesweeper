@@ -1,0 +1,1 @@
+const cellTemplate = document.getElementById("template-container").getElementsByClassName("cell")[0];
